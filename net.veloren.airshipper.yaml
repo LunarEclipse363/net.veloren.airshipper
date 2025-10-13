@@ -25,22 +25,22 @@ modules:
         only-arches:
           - aarch64
         dest: rust
-        url: https://static.rust-lang.org/dist/2024-07-07/rust-nightly-aarch64-unknown-linux-gnu.tar.xz
-        sha256: 44dd79cdac49ae049052bf167856449f5a84877b870d22f6b077a00d005e2418
+        url: https://static.rust-lang.org/dist/2025-07-07/rust-nightly-aarch64-unknown-linux-gnu.tar.xz
+        sha256: 4612de18a965f7f8fa71a7850af855067eaf259e7b70ce7e624e9f39e4a981b0
       - type: archive
         only-arches:
           - x86_64
         dest: rust
-        url: https://static.rust-lang.org/dist/2024-07-07/rust-nightly-x86_64-unknown-linux-gnu.tar.xz
-        sha256: 6c84e08c0fd3002f98aeac169a4cd238345f7d533521fa502aac8562ce6d6dab
+        url: https://static.rust-lang.org/dist/2025-07-07/rust-nightly-x86_64-unknown-linux-gnu.tar.xz
+        sha256: 6ebe9b9674f01e0acbce9316cf426292b8a2f3c1eff5302421f29fd9e2451820
     build-commands:
       - cd rust && ./install.sh --prefix=/app/sdk/rust-nightly --without=rust-docs --without=rust-docs-json-preview --disable-ldconfig --verbose
   - name: airshipper
     buildsystem: simple
     sources:
       - type: archive
-        url: "https://gitlab.com/veloren/airshipper/-/archive/v0.15.0/airshipper-v0.15.0.tar.gz"
-        sha256: df5cbdbbbb631d5795eb67c9f035cb2cff03ea94f7bc2164f63ac22cdfbf25fa
+        url: "https://gitlab.com/veloren/airshipper/-/archive/v0.16.0/airshipper-v0.16.0.tar.gz"
+        sha256: ff58515de31a9b0e854dbaa0c0c3bc954dcdf07f21f435bfab1a95e2269ef835
       - generated-sources.json
     build-options:
       env:
